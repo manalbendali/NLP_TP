@@ -8,6 +8,8 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - ask_weather
+  - weather_question
 
 responses:
   utter_greet:
@@ -28,6 +30,15 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_sunny_response:
+  - text: "Yes, it's expected to be sunny this weekend."
+
+  utter_rainy_response:
+  - text: "There's a chance of rain later today."
+
+  utter_temperature_response:
+  - text: "The temperature tomorrow is expected to be around 25°C."
 
 session_config:
   session_expiration_time: 60
