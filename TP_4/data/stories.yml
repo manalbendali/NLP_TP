@@ -28,3 +28,20 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+  
+- story: weather query
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: action_get_location
+  - action: action_get_weather
+
+  - story: weather query with location provided after clarification
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_weather
+    - action: action_ask_location
+    - intent: provide_location
+    - action: action_get_weather
